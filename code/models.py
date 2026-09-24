@@ -71,9 +71,10 @@ def load():
             df.at[i, "pp_other"] = 1
     for c in ("n_opp_tri", "n_team_tri", "n_opp_3"):
         df[f"{c}_c"] = df[c].clip(upper=4)
-    for c in ("gk_dist_goal", "gk_line_off"):
-        df[c] = df[c].fillna(df[c].median()).clip(upper=df[c].quantile(0.995))
-    df["gk_shot_dist"] = df["gk_shot_dist"].fillna(df["gk_shot_dist"].median())
+    # fixed, data-independent treatment (no information from test units): a missing goalkeeper (0.1 % of shots)
+    # is flagged by gk_present and its distances set to 0; distances are capped at 15 yd (a goalkeeper farther out is\n    # out of the play, and uncapped values would be extrapolated by the splines)
+    for c in ("gk_dist_goal", "gk_line_off", "gk_shot_dist"):
+        df[c] = df[c].fillna(0.0).clip(upper=15.0)
     return df.reset_index(drop=True)
 
 
@@ -110,6 +111,15 @@ def run(df, design):
         splits = [(f"fold{i}", tr, te) for i, (tr, te) in enumerate(folds)]
     elif design == "loco":
         splits = [(u, np.flatnonzero(df.unit != u), np.flatnonzero(df.unit == u)) for u in sorted(df.unit.unique())]
+    elif design == "loco_sub":
+        # LOCO with the training set cut to the size of a within-pool fold (80 % of all matches), so that the
+        # transfer penalty is not flattered by the larger LOCO training sets
+        rng = np.random.default_rng(SEED)
+        k = int(round(0.8 * df.match_id.nunique()))
+        splits = []
+        for u in sorted(df.unit.unique()):
+            keep = rng.choice(df.match_id[df.unit != u].unique(), size=k, replace=False)
+            splits.append((u, np.flatnonzero(df.match_id.isin(keep).values), np.flatnonzero(df.unit == u)))
     else:  # cross: train on one group, test on the units of the other groups
         splits = [(g, np.flatnonzero(df.group == g), np.flatnonzero(df.group != g)) for g in UNITS]
     for name, tr, te in splits:
@@ -126,7 +136,7 @@ def run(df, design):
 def main():
     df = load()
     print(len(df), "open-play shots with freeze frames;", df.groupby("group").size().to_dict(), flush=True)
-    designs = sys.argv[1:] or ["within", "loco", "cross"]
+    designs = sys.argv[1:] or ["within", "loco", "loco_sub", "cross"]
     preds = [run(df, d) for d in designs]
     p = pd.concat(preds, ignore_index=True).merge(
         df[["id", "match_id", "unit", "group", "goal", "statsbomb_xg"]], on="id")

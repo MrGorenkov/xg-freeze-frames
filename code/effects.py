@@ -64,6 +64,20 @@ def main():
            "empty_triangle_goal_rate_hidden": float(s.goal[empty & part].mean()), "n_empty_hidden": int((empty & part).sum()),
            "empty_share_visible": float(empty[~part].mean()), "empty_share_hidden": float(empty[part].mean()),
            "dist_mean_visible": float(s.dist[~part].mean()), "dist_mean_hidden": float(s.dist[part].mean())}
+    # model-based check within the 23 units: observed / expected goals of LOCO forecasts for partly hidden and fully
+    # visible triangles, and for fully visible shots at a similar distance (>= 20 yd), where the hidden ones concentrate
+    p = pd.read_parquet(ROOT / "data" / "preds.parquet")
+    p = p[p.design == "loco"].merge(s[["id", "tri_visible", "dist"]], on="id")
+    p["hidden"] = p.tri_visible < 0.999
+    sets = {"hidden": p[p.hidden], "visible": p[~p.hidden], "visible_20yd_plus": p[~p.hidden & (p.dist >= 20)],
+            "hidden_20yd_plus": p[p.hidden & (p.dist >= 20)]}
+    vis["units_360_shots"] = int(len(p))
+    vis["units_share_hidden"] = float(p.hidden.mean())
+    for name, g in sets.items():
+        for m in ("GLM_GEO", "GBM_GEO", "statsbomb_xg"):
+            e, o = float(g[m].sum()), int(g.goal.sum())
+            sd = float(np.sqrt((g[m] * (1 - g[m])).sum()))
+            vis[f"{name}_{m}"] = {"n": int(len(g)), "goals": o, "expected": e, "O_E": o / e, "z": (o - e) / sd}
     (RES / "visibility.json").write_text(json.dumps(vis, indent=1))
     print(pd.DataFrame(rows).round(3).to_string())
     print(json.dumps(het, indent=1))
