@@ -10,8 +10,8 @@ The StatsBomb Public Data User Agreement does not allow redistribution, so this 
 ## What is done
 - 77,770 open-play shots with freeze frames from 23 complete competition-seasons (men's and women's leagues and
   tournaments, 2015–2025); one-club seasons and historic single matches are excluded.
-- Nested models: location + context (LOC) vs. the same + freeze-frame geometry (GEO: goal-mouth occlusion, defenders in
-  the shot triangle, goalkeeper offset from the shot line, goalkeeper distance from goal, nearest opponent), each as a
+- Nested models: location + context (LOC) vs. the same + freeze-frame geometry (GEO: ten inputs; the main five are goal-mouth occlusion,
+  defenders in the shot triangle, goalkeeper offset from the shot line, goalkeeper distance from goal, nearest opponent), each as a
   spline logistic regression and as LightGBM.
 - Designs: 5-fold cross-validation by match, leave-one-competition-season-out, and training on one group of
   competitions (men's/women's × club/international) with evaluation on the others.
