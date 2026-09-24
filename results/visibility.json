@@ -1,0 +1,14 @@
+{
+ "shots_360": 9896,
+ "triangle_partly_hidden": 1591,
+ "share_partly_hidden": 0.16077202910266775,
+ "mean_visible_share_when_hidden": 0.8088921292657595,
+ "empty_triangle_goal_rate_visible": 0.1619332336821126,
+ "n_empty_visible": 4014,
+ "empty_triangle_goal_rate_hidden": 0.04918032786885246,
+ "n_empty_hidden": 732,
+ "empty_share_visible": 0.48332329921733896,
+ "empty_share_hidden": 0.4600879949717159,
+ "dist_mean_visible": 16.148821883897995,
+ "dist_mean_hidden": 26.23483358637558
+}

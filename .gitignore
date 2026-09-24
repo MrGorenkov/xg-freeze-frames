@@ -1,0 +1,11 @@
+﻿# StatsBomb data may not be redistributed (StatsBomb Public Data User Agreement): code downloads it
+data/*
+!data/data_notes.md
+# manuscript text, journal forms and working notes are not published here
+paper/*
+!paper/figures/
+templates/
+00_requirements.md
+lit/notes.md
+__pycache__/
+*.pyc

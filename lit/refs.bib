@@ -1,0 +1,604 @@
+% refs.bib -- xG with freeze frames (JQAS target). Built 2026-09-23/24.
+% Every entry verified against Crossref (DOI lookup), arXiv API, or publisher/proceedings page.
+% The field "note" records venue type / verification source / StatsBomb usage. Remove before submission.
+% JQAS style: Harvard, NO issue numbers -> "number" fields deliberately omitted.
+
+% ===================== xG: classic and ML models =====================
+
+@article{pollard1997measuring,
+  author  = {Pollard, Richard and Reep, Charles},
+  title   = {Measuring the effectiveness of playing strategies at soccer},
+  journal = {Journal of the Royal Statistical Society: Series D (The Statistician)},
+  year    = {1997}, volume = {46}, pages = {541--550},
+  doi     = {10.1111/1467-9884.00108},
+  note    = {journal; Crossref-verified}
+}
+
+@incollection{ensum2005applications,
+  author    = {Ensum, J. and Pollard, R. and Taylor, S.},
+  title     = {Applications of logistic regression to shots at goal in association football},
+  booktitle = {Science and Football V},
+  editor    = {Reilly, T. and Cabri, J. and Ara{\'u}jo, D.},
+  publisher = {Routledge}, address = {London}, year = {2005},
+  doi       = {10.4324/9780203412992-78},
+  note      = {book chapter; DOI Crossref-verified (Crossref lacks authors; pages differ between sources: 228-229 in Crossref vs 211-218 elsewhere -- check print copy)}
+}
+
+@article{rathke2017examination,
+  author  = {Rathke, Alex},
+  title   = {An examination of expected goals and shot efficiency in soccer},
+  journal = {Journal of Human Sport and Exercise},
+  year    = {2017}, volume = {12}, pages = {S514--S529},
+  doi     = {10.14198/jhse.2017.12.Proc2.05},
+  note    = {journal (proceedings issue); Crossref-verified; pages from ResearchGate/Semantic Scholar}
+}
+
+@inproceedings{lucey2014quality,
+  author    = {Lucey, Patrick and Bialkowski, Alina and Monfort, Mathew and Carr, Peter and Matthews, Iain},
+  title     = {``Quality vs Quantity'': Improved shot prediction in soccer using strategic features from spatiotemporal data},
+  booktitle = {Proceedings of the 8th MIT Sloan Sports Analytics Conference},
+  address   = {Boston}, year = {2014},
+  url       = {https://www.sloansportsconference.com/research-papers/quality-vs-quantity-improved-shot-prediction-in-soccer-using-strategic-features-from-spatiotemporal-data},
+  note      = {conference (non-archival, not indexed); verified on SSAC site + Semantic Scholar (S2 lists 2015; citing papers use 2014)}
+}
+
+@article{anzer2021goal,
+  author  = {Anzer, Gabriel and Bauer, Pascal},
+  title   = {A goal scoring probability model for shots based on synchronized positional and event data in football (soccer)},
+  journal = {Frontiers in Sports and Active Living},
+  year    = {2021}, volume = {3}, pages = {624475},
+  doi     = {10.3389/fspor.2021.624475},
+  note    = {journal; Crossref-verified; tracking data (Bundesliga), not StatsBomb}
+}
+
+@incollection{robberechts2020data,
+  author    = {Robberechts, Pieter and Davis, Jesse},
+  title     = {How data availability affects the ability to learn good {xG} models},
+  booktitle = {Machine Learning and Data Mining for Sports Analytics (MLSA 2020)},
+  series    = {Communications in Computer and Information Science},
+  publisher = {Springer}, address = {Cham}, year = {2020}, pages = {17--27},
+  doi       = {10.1007/978-3-030-64912-8_2},
+  note      = {workshop proceedings (CCIS); Crossref-verified}
+}
+
+@article{mead2023expected,
+  author  = {Mead, James and O'Hare, Anthony and McMenemy, Paul},
+  title   = {Expected goals in football: improving model performance and demonstrating value},
+  journal = {PLOS ONE},
+  year    = {2023}, volume = {18}, pages = {e0282295},
+  doi     = {10.1371/journal.pone.0282295},
+  note    = {journal; Crossref-verified; Wyscout data}
+}
+
+@article{hewitt2023machine,
+  author  = {Hewitt, James H. and Karaku{\c{s}}, Oktay},
+  title   = {A machine learning approach for player and position adjusted expected goals in football (soccer)},
+  journal = {Franklin Open},
+  year    = {2023}, volume = {4}, pages = {100034},
+  doi     = {10.1016/j.fraope.2023.100034},
+  note    = {journal; Crossref + arXiv:2301.13052 verified; StatsBomb open data incl. freeze-frame features}
+}
+
+@article{scholtes2024bayesxg,
+  author  = {Scholtes, Alexander and Karaku{\c{s}}, Oktay},
+  title   = {Bayes-{xG}: player and position correction on expected goals ({xG}) using {Bayesian} hierarchical approach},
+  journal = {Frontiers in Sports and Active Living},
+  year    = {2024}, volume = {6}, pages = {1348983},
+  doi     = {10.3389/fspor.2024.1348983},
+  note    = {journal; Crossref + arXiv:2311.13707 verified; StatsBomb open data incl. freeze-frame features}
+}
+
+@article{iapteff2025toward,
+  author  = {Iapteff, Lo{\"i}c and Le Coz, Sebastian and Rioland, Maxime and Houde, Titouan and Carling, Christopher and Imbach, Frank},
+  title   = {Toward interpretable expected goals modeling using {Bayesian} mixed models},
+  journal = {Frontiers in Sports and Active Living},
+  year    = {2025}, volume = {7}, pages = {1504362},
+  doi     = {10.3389/fspor.2025.1504362},
+  note    = {journal; Crossref-verified; StatsBomb open data, 11 competitions incl. women's}
+}
+
+@inproceedings{cavus2022explainable,
+  author    = {Cavus, Mustafa and Biecek, Przemys{\l}aw},
+  title     = {Explainable expected goal models for performance analysis in football analytics},
+  booktitle = {2022 IEEE 9th International Conference on Data Science and Advanced Analytics (DSAA)},
+  publisher = {IEEE}, year = {2022}, pages = {1--9},
+  doi       = {10.1109/DSAA54385.2022.10032440},
+  note      = {conference; Crossref + arXiv:2206.07212 verified (the DOI ...9941879 often quoted is WRONG)}
+}
+
+@incollection{cavus2025glocal,
+  author    = {Cavus, Mustafa and Sta{\'n}do, Adrian and Biecek, Przemys{\l}aw},
+  title     = {Glocal explanations of expected goal models in football},
+  booktitle = {Explainable Artificial Intelligence},
+  series    = {Communications in Computer and Information Science},
+  publisher = {Springer}, address = {Cham}, year = {2025}, pages = {3--26},
+  doi       = {10.1007/978-3-032-08333-3_1},
+  note      = {conference proceedings (CCIS); Crossref + arXiv:2308.15559 verified}
+}
+
+@article{bandara2024predicting,
+  author  = {Bandara, Ishara and Shelyag, Sergiy and Rajasegarar, Sutharshan and Dwyer, Dan and Kim, Eun-jin and Angelova, Maia},
+  title   = {Predicting goal probabilities with improved {xG} models using event sequences in association football},
+  journal = {PLOS ONE},
+  year    = {2024}, volume = {19}, pages = {e0312278},
+  doi     = {10.1371/journal.pone.0312278},
+  note    = {journal; Crossref-verified; StatsBomb open data, no freeze-frame features}
+}
+
+@article{karim2023kos,
+  author  = {Karim, Hassani and Marwane, Lotfi},
+  title   = {The Kos Angle, an optimizing parameter for football expected goals ({xG}) models},
+  journal = {International Journal of Computer Science in Sport},
+  year    = {2023}, volume = {22}, pages = {49--61},
+  doi     = {10.2478/ijcss-2023-0010},
+  note    = {journal; Crossref-verified (author given/family order as in Crossref -- check on PDF); full text not read}
+}
+
+@misc{davis2024biases,
+  author        = {Davis, Jesse and Robberechts, Pieter},
+  title         = {Biases in expected goals models confound finishing ability},
+  year          = {2024},
+  eprint        = {2401.09940}, archivePrefix = {arXiv}, primaryClass = {cs.LG},
+  note          = {preprint; arXiv-verified, full text read; StatsBomb open data 2015/16}
+}
+
+@article{baron2024miss,
+  author  = {Baron, Ethan and Sandholtz, Nathan and Pleuler, Devin and Chan, Timothy C. Y.},
+  title   = {Miss it like {Messi}: extracting value from off-target shots in soccer},
+  journal = {Journal of Quantitative Analysis in Sports},
+  year    = {2024}, volume = {20}, pages = {37--50},
+  doi     = {10.1515/jqas-2022-0107},
+  note    = {journal (JQAS); Crossref-verified}
+}
+
+@misc{pippinggamon2025beyond,
+  author        = {Pipping-Gam{\'o}n, Jonathan and Feng, Tianshu and Sabin, R. Paul},
+  title         = {Beyond expected goals: a probabilistic framework for shot occurrences in soccer},
+  year          = {2025},
+  eprint        = {2512.00203}, archivePrefix = {arXiv},
+  note          = {preprint (submitted to JQAS per arXiv comment); arXiv-verified; proprietary Gradient Sports data}
+}
+
+@misc{mahmudlu2025whatif,
+  author        = {Mahmudlu, Mikayil and Karaku{\c{s}}, Oktay and Arkada{\c{s}}, Hasan},
+  title         = {What if they took the shot? {A} hierarchical {Bayesian} framework for counterfactual expected goals},
+  year          = {2025},
+  eprint        = {2511.23072}, archivePrefix = {arXiv},
+  note          = {preprint; arXiv-verified; StatsBomb 2015/16, 9,970 shots}
+}
+
+@misc{appiah2026reproducible,
+  author       = {Appiah, Kofi Nyantakyi and Adu, Nathanael and Singh, Divyanshu Kumar and Nartey, Edward Edem},
+  title        = {Building reproducible expected-goals models from public football event data: logistic and mixed-effects analysis using {StatsBomb} open data},
+  year         = {2026},
+  howpublished = {Research Square preprint},
+  doi          = {10.21203/rs.3.rs-9022775/v1},
+  note         = {preprint; Crossref-verified (abstract read); StatsBomb open data, location-only}
+}
+
+@incollection{gallagher2026lastmile,
+  author    = {Gallagher, Joe and Dinsdale, Daniel and Murali, Arun and Mackay, Nils and Foroni, Daniele and Lucey, Patrick},
+  title     = {Addressing last mile issues in sports analytics: a case study in expected goals in soccer},
+  booktitle = {Sports Analytics},
+  series    = {Lecture Notes in Computer Science},
+  publisher = {Springer}, address = {Cham}, year = {2026}, pages = {475--483},
+  doi       = {10.1007/978-3-032-27272-0_30},
+  note      = {conference proceedings (LNCS); Crossref-verified; full text NOT read (paywall) -- read before citing substantively}
+}
+
+@article{delacruz2026shot,
+  author  = {De-la-Cruz-Torres, Blanca and Ruiz-de-Alarc{\'o}n-Quintero, Anselmo and Navarro-Castro, Miguel},
+  title   = {The role of shot velocity in advanced post-shot metrics: evidence from the {UEFA} {European} Football Championships},
+  journal = {Data},
+  year    = {2026}, volume = {11}, pages = {39},
+  doi     = {10.3390/data11020039},
+  note    = {journal; Crossref-verified; full text NOT read (403) -- data source unverified}
+}
+
+% ===================== Women's football / transfer / bias =====================
+
+@inproceedings{bransen2021womens,
+  author    = {Bransen, Lotte and Davis, Jesse},
+  title     = {Women's football analyzed: interpretable expected goals models for women},
+  booktitle = {Proceedings of the AI for Sports Analytics (AISA) Workshop at IJCAI 2021},
+  year      = {2021},
+  url       = {https://lirias.kuleuven.be/3469168},
+  note      = {workshop (non-archival); verified via KU Leuven Lirias, full PDF read; SciSports event data}
+}
+
+@article{bransen2024data,
+  author  = {Bransen, Lotte and Davis, Jesse},
+  title   = {A data-driven analysis of the technical and tactical evolution of elite women's football},
+  journal = {International Journal of Sports Science \& Coaching},
+  year    = {2024}, volume = {19}, pages = {2449--2459},
+  doi     = {10.1177/17479541241257809},
+  note    = {journal; Crossref-verified}
+}
+
+@article{garnica2021understanding,
+  author  = {Garnica-Caparr{\'o}s, Marc and Memmert, Daniel},
+  title   = {Understanding gender differences in professional {European} football through machine learning interpretability and match actions data},
+  journal = {Scientific Reports},
+  year    = {2021}, volume = {11}, pages = {10805},
+  doi     = {10.1038/s41598-021-90264-w},
+  note    = {journal; Crossref-verified}
+}
+
+@article{brechot2020dealing,
+  author  = {Brechot, Marc and Flepp, Raphael},
+  title   = {Dealing with randomness in match outcomes: how to rethink performance evaluation in {European} club football using expected goals},
+  journal = {Journal of Sports Economics},
+  year    = {2020}, volume = {21}, pages = {335--362},
+  doi     = {10.1177/1527002519897962},
+  note    = {journal; Crossref-verified}
+}
+
+@article{franks2016meta,
+  author  = {Franks, Alexander M. and D'Amour, Alexander and Cervone, Daniel and Bornn, Luke},
+  title   = {Meta-analytics: tools for understanding the statistical properties of sports metrics},
+  journal = {Journal of Quantitative Analysis in Sports},
+  year    = {2016}, volume = {12}, pages = {151--165},
+  doi     = {10.1515/jqas-2016-0098},
+  note    = {journal (JQAS); Crossref-verified (pages from Davis & Robberechts reference list)}
+}
+
+% ===================== Positional context, value models, GNNs =====================
+
+@inproceedings{spearman2018beyond,
+  author    = {Spearman, William},
+  title     = {Beyond expected goals},
+  booktitle = {Proceedings of the 12th MIT Sloan Sports Analytics Conference},
+  address   = {Boston}, year = {2018},
+  note      = {conference (non-archival, not indexed); verified via author post + citing AAMAS paper; no DOI}
+}
+
+@inproceedings{fernandez2018wide,
+  author    = {Fern{\'a}ndez, Javier and Bornn, Luke},
+  title     = {Wide open spaces: a statistical technique for measuring space creation in professional soccer},
+  booktitle = {Proceedings of the 12th MIT Sloan Sports Analytics Conference},
+  address   = {Boston}, year = {2018},
+  note      = {conference (non-archival); verified via Semantic Scholar/Google Scholar record}
+}
+
+@article{fernandez2021framework,
+  author  = {Fern{\'a}ndez, Javier and Bornn, Luke and Cervone, Daniel},
+  title   = {A framework for the fine-grained evaluation of the instantaneous expected value of soccer possessions},
+  journal = {Machine Learning},
+  year    = {2021}, volume = {110}, pages = {1389--1427},
+  doi     = {10.1007/s10994-021-05989-6},
+  note    = {journal; Crossref-verified}
+}
+
+@inproceedings{decroos2019actions,
+  author    = {Decroos, Tom and Bransen, Lotte and Van Haaren, Jan and Davis, Jesse},
+  title     = {Actions speak louder than goals: valuing player actions in soccer},
+  booktitle = {Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
+  publisher = {ACM}, year = {2019}, pages = {1851--1861},
+  doi       = {10.1145/3292500.3330758},
+  note      = {conference; Crossref-verified}
+}
+
+@inproceedings{vanroy2021leaving,
+  author    = {Van Roy, Maaike and Robberechts, Pieter and Yang, Wen-Chi and De Raedt, Luc and Davis, Jesse},
+  title     = {Leaving goals on the pitch: evaluating decision making in soccer},
+  booktitle = {Proceedings of the 15th MIT Sloan Sports Analytics Conference},
+  year      = {2021},
+  eprint    = {2104.03252}, archivePrefix = {arXiv},
+  note      = {conference (non-archival); arXiv journal-ref "2021 MIT Sloan Sports Analytics Conference"}
+}
+
+@inproceedings{robberechts2023unxpass,
+  author    = {Robberechts, Pieter and Van Roy, Maaike and Davis, Jesse},
+  title     = {un-{xPass}: measuring soccer player's creativity},
+  booktitle = {Proceedings of the 29th ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  publisher = {ACM}, year = {2023}, pages = {4768--4777},
+  doi       = {10.1145/3580305.3599924},
+  note      = {conference; Crossref-verified; uses StatsBomb 360}
+}
+
+@article{link2016real,
+  author  = {Link, Daniel and Lang, Steffen and Seidenschwarz, Philipp},
+  title   = {Real time quantification of dangerousity in football using spatiotemporal tracking data},
+  journal = {PLOS ONE},
+  year    = {2016}, volume = {11}, pages = {e0168768},
+  doi     = {10.1371/journal.pone.0168768},
+  note    = {journal; Crossref-verified}
+}
+
+@article{andrienko2017visual,
+  author  = {Andrienko, Gennady and Andrienko, Natalia and Budziak, Guido and Dykes, Jason and Fuchs, Georg and von Landesberger, Tatiana and Weber, Hendrik},
+  title   = {Visual analysis of pressure in football},
+  journal = {Data Mining and Knowledge Discovery},
+  year    = {2017}, volume = {31}, pages = {1793--1839},
+  doi     = {10.1007/s10618-017-0513-2},
+  note    = {journal; Crossref-verified (full author list from Crossref DOI record)}
+}
+
+@inproceedings{everett2023inferring,
+  author    = {Everett, Gregory and Beal, Ryan J. and Matthews, Tim and Early, Joseph and Norman, Timothy J. and Ramchurn, Sarvapali D.},
+  title     = {Inferring player location in sports matches: multi-agent spatial imputation from limited observations},
+  booktitle = {Proceedings of the 22nd International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2023)},
+  year      = {2023}, pages = {1643--1651},
+  eprint    = {2302.06569}, archivePrefix = {arXiv},
+  note      = {conference; Crossref (DOI 10.65109/vspo4093) + arXiv PDF read; K League tracking data (Bepro)}
+}
+
+@article{wang2024tacticai,
+  author  = {Wang, Zhe and Veli{\v{c}}kovi{\'c}, Petar and Hennes, Daniel and Toma{\v{s}}ev, Nenad and Prince, Laurel and Kaisers, Michael and Bachrach, Yoram and Elie, Romuald and Wenliang, Li Kevin and Piccinini, Federico and others},
+  title   = {{TacticAI}: an {AI} assistant for football tactics},
+  journal = {Nature Communications},
+  year    = {2024}, volume = {15}, pages = {1906},
+  doi     = {10.1038/s41467-024-45965-x},
+  note    = {journal; Crossref-verified; GNN on corner-kick positions}
+}
+
+@inproceedings{bekkers2023gnn,
+  author    = {Bekkers, Joris and Sahasrabudhe, Amod},
+  title     = {A graph neural network deep-dive into successful counterattacks},
+  booktitle = {Proceedings of the 17th MIT Sloan Sports Analytics Conference},
+  year      = {2023},
+  eprint    = {2411.17450}, archivePrefix = {arXiv},
+  note      = {conference (non-archival); arXiv-verified; broadcast tracking MLS/NWSL/international, gender-specific GNNs}
+}
+
+@misc{nascimento2023gabr,
+  author        = {Nascimento, Ricardo Furbino Marques do and Rios-Neto, Hugo M. R.},
+  title         = {Generalized action-based ball recovery model using 360$^\circ$ data},
+  year          = {2023},
+  eprint        = {2307.04215}, archivePrefix = {arXiv},
+  note          = {preprint; arXiv-verified; StatsBomb 360}
+}
+
+@article{kovalchik2023player,
+  author  = {Kovalchik, Stephanie A.},
+  title   = {Player tracking data in sports},
+  journal = {Annual Review of Statistics and Its Application},
+  year    = {2023}, volume = {10}, pages = {677--697},
+  doi     = {10.1146/annurev-statistics-033021-110117},
+  note    = {journal (review); Crossref-verified}
+}
+
+@article{herold2019machine,
+  author  = {Herold, Mat and Goes, Floris and Nopp, Stephan and Bauer, Pascal and Thompson, Chris and Meyer, Tim},
+  title   = {Machine learning in men's professional football: current applications and future directions for improving attacking play},
+  journal = {International Journal of Sports Science \& Coaching},
+  year    = {2019}, volume = {14}, pages = {798--817},
+  doi     = {10.1177/1747954119879350},
+  note    = {journal (review); Crossref-verified}
+}
+
+@article{bornn2018soccer,
+  author  = {Bornn, Luke and Cervone, Dan and Fernandez, Javier},
+  title   = {Soccer analytics: unravelling the complexity of ``the beautiful game''},
+  journal = {Significance},
+  year    = {2018}, volume = {15}, pages = {26--29},
+  doi     = {10.1111/j.1740-9713.2018.01146.x},
+  note    = {magazine-style journal; Crossref-verified}
+}
+
+% ===================== Data =====================
+
+@article{pappalardo2019public,
+  author  = {Pappalardo, Luca and Cintia, Paolo and Rossi, Alessio and Massucco, Emanuele and Ferragina, Paolo and Pedreschi, Dino and Giannotti, Fosca},
+  title   = {A public data set of spatio-temporal match events in soccer competitions},
+  journal = {Scientific Data},
+  year    = {2019}, volume = {6}, pages = {236},
+  doi     = {10.1038/s41597-019-0247-7},
+  note    = {journal (data descriptor); Crossref-verified; data CC BY 4.0 on figshare}
+}
+
+@misc{statsbomb_opendata,
+  author       = {{StatsBomb}},
+  title        = {{StatsBomb} Open Data},
+  year         = {2026},
+  howpublished = {GitHub repository, \url{https://github.com/hudl/open-data} (formerly github.com/statsbomb/open-data)},
+  note         = {dataset; accessed 2026-09-23; pin commit hash in paper; StatsBomb Public Data User Agreement (8 Sep 2023)}
+}
+
+@misc{pappalardo2019figshare,
+  author       = {Pappalardo, Luca and Massucco, Emanuele},
+  title        = {Soccer match event dataset},
+  year         = {2020},
+  howpublished = {figshare collection, version 5},
+  doi          = {10.6084/m9.figshare.c.4415000.v5},
+  note         = {dataset; figshare API-verified, CC BY 4.0; author list of the collection not verified -- check figshare page}
+}
+
+% ===================== Calibration, scoring rules, evaluation =====================
+
+@article{brier1950verification,
+  author  = {Brier, Glenn W.},
+  title   = {Verification of forecasts expressed in terms of probability},
+  journal = {Monthly Weather Review},
+  year    = {1950}, volume = {78}, pages = {1--3},
+  doi     = {10.1175/1520-0493(1950)078<0001:VOFEIT>2.0.CO;2},
+  note    = {journal; Crossref-verified}
+}
+
+@article{gneiting2007strictly,
+  author  = {Gneiting, Tilmann and Raftery, Adrian E.},
+  title   = {Strictly proper scoring rules, prediction, and estimation},
+  journal = {Journal of the American Statistical Association},
+  year    = {2007}, volume = {102}, pages = {359--378},
+  doi     = {10.1198/016214506000001437},
+  note    = {journal; Crossref-verified}
+}
+
+@inproceedings{niculescu2005predicting,
+  author    = {Niculescu-Mizil, Alexandru and Caruana, Rich},
+  title     = {Predicting good probabilities with supervised learning},
+  booktitle = {Proceedings of the 22nd International Conference on Machine Learning (ICML '05)},
+  publisher = {ACM}, year = {2005}, pages = {625--632},
+  doi       = {10.1145/1102351.1102430},
+  note      = {conference; Crossref-verified}
+}
+
+@inproceedings{naeini2015obtaining,
+  author    = {Pakdaman Naeini, Mahdi and Cooper, Gregory and Hauskrecht, Milos},
+  title     = {Obtaining well calibrated probabilities using {Bayesian} binning},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  year      = {2015}, volume = {29},
+  doi       = {10.1609/aaai.v29i1.9602},
+  note      = {conference; Crossref-verified; origin of ECE}
+}
+
+@inproceedings{guo2017calibration,
+  author    = {Guo, Chuan and Pleiss, Geoff and Sun, Yu and Weinberger, Kilian Q.},
+  title     = {On calibration of modern neural networks},
+  booktitle = {Proceedings of the 34th International Conference on Machine Learning},
+  series    = {Proceedings of Machine Learning Research}, volume = {70},
+  year      = {2017}, pages = {1321--1330},
+  url       = {https://proceedings.mlr.press/v70/guo17a.html},
+  note      = {conference; verified on PMLR page}
+}
+
+@article{dimitriadis2021stable,
+  author  = {Dimitriadis, Timo and Gneiting, Tilmann and Jordan, Alexander I.},
+  title   = {Stable reliability diagrams for probabilistic classifiers},
+  journal = {Proceedings of the National Academy of Sciences},
+  year    = {2021}, volume = {118}, pages = {e2016191118},
+  doi     = {10.1073/pnas.2016191118},
+  note    = {journal; Crossref-verified; CORP reliability diagrams}
+}
+
+@article{vancalster2019calibration,
+  author  = {Van Calster, Ben and McLernon, David J. and van Smeden, Maarten and Wynants, Laure and Steyerberg, Ewout W.},
+  title   = {Calibration: the {Achilles} heel of predictive analytics},
+  journal = {BMC Medicine},
+  year    = {2019}, volume = {17}, pages = {230},
+  doi     = {10.1186/s12916-019-1466-7},
+  note    = {journal; Crossref-verified (published on behalf of the STRATOS initiative)}
+}
+
+@article{austin2019ici,
+  author  = {Austin, Peter C. and Steyerberg, Ewout W.},
+  title   = {The Integrated Calibration Index ({ICI}) and related metrics for quantifying the calibration of logistic regression models},
+  journal = {Statistics in Medicine},
+  year    = {2019}, volume = {38}, pages = {4051--4065},
+  doi     = {10.1002/sim.8281},
+  note    = {journal; Crossref-verified}
+}
+
+@article{silvafilho2023classifier,
+  author  = {Silva Filho, Telmo and Song, Hao and Perello-Nieto, Miquel and Santos-Rodriguez, Raul and Kull, Meelis and Flach, Peter},
+  title   = {Classifier calibration: a survey on how to assess and improve predicted class probabilities},
+  journal = {Machine Learning},
+  year    = {2023}, volume = {112}, pages = {3211--3260},
+  doi     = {10.1007/s10994-023-06336-7},
+  note    = {journal (survey); Crossref-verified}
+}
+
+@article{constantinou2012solving,
+  author  = {Constantinou, Anthony Costa and Fenton, Norman Elliott},
+  title   = {Solving the problem of inadequate scoring rules for assessing probabilistic football forecast models},
+  journal = {Journal of Quantitative Analysis in Sports},
+  year    = {2012}, volume = {8},
+  doi     = {10.1515/1559-0410.1418},
+  note    = {journal (JQAS); Crossref-verified}
+}
+
+@article{wheatcroft2021evaluating,
+  author  = {Wheatcroft, Edward},
+  title   = {Evaluating probabilistic forecasts of football matches: the case against the ranked probability score},
+  journal = {Journal of Quantitative Analysis in Sports},
+  year    = {2021}, volume = {17}, pages = {273--287},
+  doi     = {10.1515/jqas-2019-0089},
+  note    = {journal (JQAS); Crossref-verified}
+}
+
+@article{walsh2024machine,
+  author  = {Walsh, Conor and Joshi, Alok},
+  title   = {Machine learning for sports betting: should model selection be based on accuracy or calibration?},
+  journal = {Machine Learning with Applications},
+  year    = {2024}, volume = {16}, pages = {100539},
+  doi     = {10.1016/j.mlwa.2024.100539},
+  note    = {journal; Crossref + arXiv:2303.06021 verified}
+}
+
+@inproceedings{ovadia2019trust,
+  author    = {Ovadia, Yaniv and Fertig, Emily and Ren, Jie and Nado, Zachary and Sculley, D. and Nowozin, Sebastian and Dillon, Joshua V. and Lakshminarayanan, Balaji and Snoek, Jasper},
+  title     = {Can you trust your model's uncertainty? {Evaluating} predictive uncertainty under dataset shift},
+  booktitle = {Advances in Neural Information Processing Systems 32 (NeurIPS 2019)},
+  year      = {2019},
+  eprint    = {1906.02530}, archivePrefix = {arXiv},
+  note      = {conference; arXiv-verified (comment: NeurIPS 2019); add proceedings pages}
+}
+
+% ===================== Models and explanation =====================
+
+@inproceedings{ke2017lightgbm,
+  author    = {Ke, Guolin and Meng, Qi and Finley, Thomas and Wang, Taifeng and Chen, Wei and Ma, Weidong and Ye, Qiwei and Liu, Tie-Yan},
+  title     = {{LightGBM}: a highly efficient gradient boosting decision tree},
+  booktitle = {Advances in Neural Information Processing Systems 30 (NIPS 2017)},
+  year      = {2017},
+  url       = {https://papers.nips.cc/paper/6907-lightgbm-a-highly-efficient-gradient-boosting-decision-tree},
+  note      = {conference; verified on NeurIPS proceedings page + NeurIPS metadata.json (author list)}
+}
+
+@inproceedings{prokhorenkova2018catboost,
+  author    = {Prokhorenkova, Liudmila and Gusev, Gleb and Vorobev, Aleksandr and Dorogush, Anna Veronika and Gulin, Andrey},
+  title     = {{CatBoost}: unbiased boosting with categorical features},
+  booktitle = {Advances in Neural Information Processing Systems 31 (NeurIPS 2018)},
+  year      = {2018},
+  url       = {https://papers.nips.cc/paper/7898-catboost-unbiased-boosting-with-categorical-features},
+  note      = {conference; verified on NeurIPS proceedings page + arXiv:1706.09516}
+}
+
+@inproceedings{lundberg2017unified,
+  author    = {Lundberg, Scott M. and Lee, Su-In},
+  title     = {A unified approach to interpreting model predictions},
+  booktitle = {Advances in Neural Information Processing Systems 30 (NIPS 2017)},
+  year      = {2017},
+  url       = {https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html},
+  note      = {conference; verified on NeurIPS proceedings page}
+}
+
+@article{lundberg2020local,
+  author  = {Lundberg, Scott M. and Erion, Gabriel and Chen, Hugh and DeGrave, Alex and Prutkin, Jordan M. and Nair, Bala and Katz, Ronit and Himmelfarb, Jonathan and Bansal, Nisha and Lee, Su-In},
+  title   = {From local explanations to global understanding with explainable {AI} for trees},
+  journal = {Nature Machine Intelligence},
+  year    = {2020}, volume = {2}, pages = {56--67},
+  doi     = {10.1038/s42256-019-0138-9},
+  note    = {journal; Crossref-verified (TreeSHAP)}
+}
+
+@inproceedings{zaheer2017deepsets,
+  author    = {Zaheer, Manzil and Kottur, Satwik and Ravanbakhsh, Siamak and P{\'o}czos, Barnab{\'a}s and Salakhutdinov, Ruslan and Smola, Alexander},
+  title     = {Deep sets},
+  booktitle = {Advances in Neural Information Processing Systems 30 (NIPS 2017)},
+  year      = {2017},
+  eprint    = {1703.06114}, archivePrefix = {arXiv},
+  note      = {conference; arXiv-verified (comment: NIPS 2017)}
+}
+
+@inproceedings{grinsztajn2022tree,
+  author    = {Grinsztajn, L{\'e}o and Oyallon, Edouard and Varoquaux, Ga{\"e}l},
+  title     = {Why do tree-based models still outperform deep learning on typical tabular data?},
+  booktitle = {Advances in Neural Information Processing Systems 35 (NeurIPS 2022), Datasets and Benchmarks Track},
+  year      = {2022}, pages = {507--520},
+  doi       = {10.52202/068431-0037},
+  note      = {conference; Crossref-verified}
+}
+
+% ===================== Grey literature (cite sparingly, or only in notes) =====================
+
+@misc{arslan2020freezeframe,
+  author       = {Arslan, An{\i}l Cem and Robberechts, Pieter and Davis, Jesse},
+  title        = {Enhancing {xG} models with freeze frame data},
+  year         = {2020},
+  howpublished = {KU Leuven DTAI Sports Analytics blog, 2 September 2020, \url{https://dtai.cs.kuleuven.be/sports/blog/enhancing-xg-models-with-freeze-frame-data/}},
+  note         = {grey literature (blog, part of an MSc thesis); read; StatsBomb Messi data}
+}
+
+@misc{vatvani2022upgrading,
+  author       = {Vatvani, Dinesh},
+  title        = {Upgrading expected goals},
+  year         = {2022},
+  howpublished = {StatsBomb/Hudl blog, 16 May 2022, \url{https://www.hudl.com/blog/upgrading-expected-goals}},
+  note         = {grey literature (provider documentation of statsbomb_xg features); read}
+}
+
+% NOT recommended for citation (listed so it is not "rediscovered" later):
+% Singh, S. (2025). Improving expected Goals (xG) models: methods, results, and novel extensions.
+% Journal of High School Science 9. doi:10.64336/001c.144180 -- high-school journal; reference list contains
+% misattributed citations; random 70/30 split. Mentioned only in notes.md (Gap section).
