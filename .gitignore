@@ -6,6 +6,9 @@ paper/*
 !paper/figures/
 templates/
 00_requirements.md
+00_requirements_jss.md
+STATUS.md
+.git-pub/
 lit/notes.md
 __pycache__/
 *.pyc

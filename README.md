@@ -27,6 +27,7 @@ code/
   models.py          GLM/GBM × LOC/GEO under the three designs -> data/preds.parquet
   metrics.py         proper scores, CORP decomposition, calibration measures
   evaluate.py        results/metrics_units.csv, metrics_groups.csv, gain.csv, recal.csv
+  sample_size_sensitivity.py  post-collection sensitivity of fixed LOCO predictions
   effects.py         results/effects.csv, heterogeneity.json, visibility.json
   figures.py         paper/figures/
 data/data_notes.md   description of the source data, its licence and caveats
@@ -40,9 +41,15 @@ python code/download_shots.py      # ~12 GB streamed, ~100 MB kept
 python code/features.py
 python code/models.py
 python code/evaluate.py
+python code/sample_size_sensitivity.py
 python code/effects.py
 python code/figures.py
 ```
+
+`results/sample_size_sensitivity.json` records a post-collection normal sensitivity approximation using a paired
+match-bootstrap standard error, with resampling stratified by competition-season. This calculation conditions on
+the fitted predictions and observed competitions. It excludes refitting uncertainty and is not an a priori sample
+size calculation or power evaluated at the observed gain.
 One 360 file at this commit (`three-sixty/3845506.json`) is not valid JSON; the match is kept without 360 frames.
 
 ## Licence

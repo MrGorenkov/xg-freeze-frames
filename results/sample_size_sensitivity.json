@@ -1,0 +1,41 @@
+{
+  "timing": "post-collection, during submission preparation; not preregistered",
+  "estimand": "shot-weighted paired LOC minus GEO LOCO log loss",
+  "shots": 77770,
+  "matches_with_open_play_shots": 3220,
+  "competition_seasons": 23,
+  "replications": 10000,
+  "seed": 20261103,
+  "alpha": 0.05,
+  "target_power": 0.8,
+  "sidedness": "two-sided",
+  "normal_noncentral_shift": 2.801581787013699,
+  "probability_clip": 1e-06,
+  "method": "Normal sensitivity approximation using a match-bootstrap SE, stratified by unit. Variance is assumed locally constant under a hypothetical mean shift. No power is calculated at the observed gain.",
+  "limitations": "Conditional on fitted predictions and observed competition-seasons; excludes refitting and selection uncertainty. Does not justify subgroup, interaction, equivalence or player-level claims.",
+  "versions": {
+    "python": "3.12.10",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1"
+  },
+  "input_sha256": "c462c863bbc93e209239ec886cff74e0786b0dc0918863adbfcc4e9b79efd12a",
+  "results": [
+    {
+      "model": "GLM",
+      "gain": 0.015261280421163089,
+      "bootstrap_se": 0.0006511119314861641,
+      "ci_lo": 0.01399583856374954,
+      "ci_hi": 0.016534437040628125,
+      "normal_sensitivity_minimum_gain": 0.001824143328558949
+    },
+    {
+      "model": "GBM",
+      "gain": 0.015101093363412183,
+      "bootstrap_se": 0.0006702408122790937,
+      "ci_lo": 0.013799786422286056,
+      "ci_hi": 0.016424422103186086,
+      "normal_sensitivity_minimum_gain": 0.0018777344525943767
+    }
+  ]
+}
